@@ -38,10 +38,12 @@
 		EE562C7F1BDFA3AA00D2875A /* TrackerMapsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE562C7E1BDFA3AA00D2875A /* TrackerMapsTests.swift */; };
 		EE562C981BDFBE5800D2875A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = EE562C971BDFBE5800D2875A /* Podfile */; };
 		EE6285E81BEBA4CE003D3E47 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6285E71BEBA4CE003D3E47 /* HealthManager.swift */; };
+		EE6D8BEC1C1C0127005E2A18 /* LogInParseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6D8BEB1C1C0127005E2A18 /* LogInParseViewController.swift */; };
 		EE89E2021BEA9E0400370CFC /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE89E2011BEA9E0400370CFC /* HealthKit.framework */; };
 		EE9F6C821BE0ED4900327FE7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE9F6C811BE0ED4900327FE7 /* MapKit.framework */; };
 		EED10C051C1B75AD000B7A84 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = EED10C041C1B75AD000B7A84 /* .gitignore */; };
 		EED2E82E1C19BE2A001A5B73 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE9F6C811BE0ED4900327FE7 /* MapKit.framework */; };
+		EEDDE8111C1CBC4200CB4FC6 /* SignUPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDDE8101C1CBC4200CB4FC6 /* SignUPViewController.swift */; };
 		EEF9B5A11BEAA98F00B2982E /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEF9B5A01BEAA98F00B2982E /* Entitlements.plist */; };
 /* End PBXBuildFile section */
 
@@ -95,10 +97,12 @@
 		EE562C971BDFBE5800D2875A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		EE562C991BDFC10E00D2875A /* TrackerMaps-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TrackerMaps-Bridging-Header.h"; sourceTree = "<group>"; };
 		EE6285E71BEBA4CE003D3E47 /* HealthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HealthManager.swift; path = ../HealthManager.swift; sourceTree = "<group>"; };
+		EE6D8BEB1C1C0127005E2A18 /* LogInParseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInParseViewController.swift; sourceTree = "<group>"; };
 		EE89E2011BEA9E0400370CFC /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		EE9F6C811BE0ED4900327FE7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		EE9F6C851BE0ED6600327FE7 /* TrackerMaps.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TrackerMaps.entitlements; sourceTree = "<group>"; };
 		EED10C041C1B75AD000B7A84 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		EEDDE8101C1CBC4200CB4FC6 /* SignUPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUPViewController.swift; sourceTree = "<group>"; };
 		EEE6DEED1C1874FA0081DA43 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		EEE6DEEF1C18751C0081DA43 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		EEF9B5A01BEAA98F00B2982E /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
@@ -161,6 +165,8 @@
 			isa = PBXGroup;
 			children = (
 				EE0B2A6F1C15BA41009EC37B /* PhotoPOIMakeViewController.swift */,
+				EE6D8BEB1C1C0127005E2A18 /* LogInParseViewController.swift */,
+				EEDDE8101C1CBC4200CB4FC6 /* SignUPViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -456,7 +462,9 @@
 			files = (
 				EE4C91971BE3BABA00E9CDFD /* StartViewController.swift in Sources */,
 				EE0B2A691C15AD0F009EC37B /* Run.swift in Sources */,
+				EE6D8BEC1C1C0127005E2A18 /* LogInParseViewController.swift in Sources */,
 				EE0B2A6A1C15AD0F009EC37B /* PlacePOI+CoreDataProperties.swift in Sources */,
+				EEDDE8111C1CBC4200CB4FC6 /* SignUPViewController.swift in Sources */,
 				EE6285E81BEBA4CE003D3E47 /* HealthManager.swift in Sources */,
 				EE0B2A701C15BA41009EC37B /* PhotoPOIMakeViewController.swift in Sources */,
 				EE0B2A661C15AD0F009EC37B /* Location+CoreDataProperties.swift in Sources */,
