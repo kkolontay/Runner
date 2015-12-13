@@ -44,6 +44,7 @@
 		EED10C051C1B75AD000B7A84 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = EED10C041C1B75AD000B7A84 /* .gitignore */; };
 		EED2E82E1C19BE2A001A5B73 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE9F6C811BE0ED4900327FE7 /* MapKit.framework */; };
 		EEDDE8111C1CBC4200CB4FC6 /* SignUPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDDE8101C1CBC4200CB4FC6 /* SignUPViewController.swift */; };
+		EEDDE8131C1DF10B00CB4FC6 /* ConnectToParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDDE8121C1DF10B00CB4FC6 /* ConnectToParse.swift */; };
 		EEF9B5A11BEAA98F00B2982E /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEF9B5A01BEAA98F00B2982E /* Entitlements.plist */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +104,7 @@
 		EE9F6C851BE0ED6600327FE7 /* TrackerMaps.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TrackerMaps.entitlements; sourceTree = "<group>"; };
 		EED10C041C1B75AD000B7A84 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		EEDDE8101C1CBC4200CB4FC6 /* SignUPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUPViewController.swift; sourceTree = "<group>"; };
+		EEDDE8121C1DF10B00CB4FC6 /* ConnectToParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectToParse.swift; sourceTree = "<group>"; };
 		EEE6DEED1C1874FA0081DA43 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		EEE6DEEF1C18751C0081DA43 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		EEF9B5A01BEAA98F00B2982E /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				EE0B2A631C15AD0F009EC37B /* Run.swift */,
 				EE0B2A641C15AD0F009EC37B /* PlacePOI+CoreDataProperties.swift */,
 				EE0B2A651C15AD0F009EC37B /* PlacePOI.swift */,
+				EEDDE8121C1DF10B00CB4FC6 /* ConnectToParse.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				EEDDE8111C1CBC4200CB4FC6 /* SignUPViewController.swift in Sources */,
 				EE6285E81BEBA4CE003D3E47 /* HealthManager.swift in Sources */,
 				EE0B2A701C15BA41009EC37B /* PhotoPOIMakeViewController.swift in Sources */,
+				EEDDE8131C1DF10B00CB4FC6 /* ConnectToParse.swift in Sources */,
 				EE0B2A661C15AD0F009EC37B /* Location+CoreDataProperties.swift in Sources */,
 				EE0B2A6B1C15AD0F009EC37B /* PlacePOI.swift in Sources */,
 				EE562C6F1BDFA3A900D2875A /* TrackerMaps.xcdatamodeld in Sources */,

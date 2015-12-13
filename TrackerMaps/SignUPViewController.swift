@@ -15,10 +15,12 @@ class SignUPViewController: UIViewController {
     @IBOutlet weak var textFieldPassword: UITextField!
     @IBOutlet weak var textFieldEMail: UITextField!
 
+    @IBOutlet weak var textFieldNameOfGroup: UITextField!
     @IBAction func pressedSignUp(sender: AnyObject) {
         let user = PFUser()
         user.username = textFieldName.text
         user.password = textFieldPassword.text
+        user.setValue(textFieldNameOfGroup.text, forKey: "nameOfGroup")
         if isValidEmail(textFieldEMail.text!) {
         user.email = textFieldEMail.text
         user.signUpInBackgroundWithBlock({succeeded, error in
@@ -69,4 +71,5 @@ class SignUPViewController: UIViewController {
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluateWithObject(testStr)
     }
-}
+
+    }

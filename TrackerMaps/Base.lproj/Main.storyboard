@@ -140,16 +140,16 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBj-Hj-S21">
                                 <rect key="frame" x="225" y="78" width="150" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="vYw-OZ-jvx"/>
+                                    <constraint firstAttribute="width" constant="150" id="XF4-6o-o3P"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRo-vv-ku8">
-                                <rect key="frame" x="239" y="295" width="123" height="30"/>
+                                <rect key="frame" x="239" y="324" width="123" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="123" id="fmd-C4-wJy"/>
+                                    <constraint firstAttribute="width" constant="123" id="B3l-nL-aEq"/>
                                 </constraints>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
@@ -161,28 +161,37 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name of group" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tCh-7h-8zZ">
+                                <rect key="frame" x="49" y="270" width="502" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="aXJ-U1-ITY" firstAttribute="centerX" secondItem="9By-L0-ft5" secondAttribute="centerX" id="DSR-sE-NY4"/>
-                            <constraint firstItem="NT9-XT-hqm" firstAttribute="leading" secondItem="9By-L0-ft5" secondAttribute="leadingMargin" constant="29" id="H2G-eq-ZcM"/>
-                            <constraint firstItem="cdZ-Bc-02e" firstAttribute="leading" secondItem="aXJ-U1-ITY" secondAttribute="leading" id="K3z-sx-nTF"/>
-                            <constraint firstItem="cdZ-Bc-02e" firstAttribute="trailing" secondItem="aXJ-U1-ITY" secondAttribute="trailing" id="LDW-ON-dfy"/>
-                            <constraint firstItem="tBj-Hj-S21" firstAttribute="top" secondItem="RbZ-N8-ETe" secondAttribute="bottom" constant="14" id="N1m-3n-WQd"/>
-                            <constraint firstItem="cdZ-Bc-02e" firstAttribute="top" secondItem="NT9-XT-hqm" secondAttribute="bottom" constant="19" id="WJv-Wd-amk"/>
-                            <constraint firstItem="NRo-vv-ku8" firstAttribute="top" secondItem="aXJ-U1-ITY" secondAttribute="bottom" constant="50" id="Ybg-R9-55r"/>
-                            <constraint firstItem="NT9-XT-hqm" firstAttribute="top" secondItem="tBj-Hj-S21" secondAttribute="bottom" constant="17" id="bxL-i5-CzH"/>
-                            <constraint firstItem="tBj-Hj-S21" firstAttribute="centerX" secondItem="NT9-XT-hqm" secondAttribute="centerX" id="fJu-Zv-6J1"/>
-                            <constraint firstItem="aXJ-U1-ITY" firstAttribute="centerX" secondItem="NRo-vv-ku8" secondAttribute="centerX" id="gFO-O3-s1Y"/>
-                            <constraint firstItem="aXJ-U1-ITY" firstAttribute="top" secondItem="cdZ-Bc-02e" secondAttribute="bottom" constant="20" id="hmH-4M-MjS"/>
-                            <constraint firstItem="cdZ-Bc-02e" firstAttribute="leading" secondItem="NT9-XT-hqm" secondAttribute="leading" id="jFf-bf-rJA"/>
-                            <constraint firstItem="cdZ-Bc-02e" firstAttribute="trailing" secondItem="NT9-XT-hqm" secondAttribute="trailing" id="wSe-dz-jWC"/>
+                            <constraint firstItem="NT9-XT-hqm" firstAttribute="leading" secondItem="9By-L0-ft5" secondAttribute="leadingMargin" constant="29" id="1uC-CJ-Bfm"/>
+                            <constraint firstItem="NRo-vv-ku8" firstAttribute="centerX" secondItem="tCh-7h-8zZ" secondAttribute="centerX" id="7rR-dm-FMQ"/>
+                            <constraint firstItem="tCh-7h-8zZ" firstAttribute="trailing" secondItem="aXJ-U1-ITY" secondAttribute="trailing" id="LhA-fk-WOK"/>
+                            <constraint firstItem="cdZ-Bc-02e" firstAttribute="trailing" secondItem="NT9-XT-hqm" secondAttribute="trailing" id="M01-As-Eyn"/>
+                            <constraint firstItem="aXJ-U1-ITY" firstAttribute="leading" secondItem="cdZ-Bc-02e" secondAttribute="leading" id="MU1-EM-eAQ"/>
+                            <constraint firstItem="aXJ-U1-ITY" firstAttribute="leading" secondItem="tCh-7h-8zZ" secondAttribute="leading" id="PbS-uN-HQU"/>
+                            <constraint firstItem="NT9-XT-hqm" firstAttribute="top" secondItem="tBj-Hj-S21" secondAttribute="bottom" constant="17" id="SHu-0l-Svo"/>
+                            <constraint firstItem="NRo-vv-ku8" firstAttribute="top" secondItem="tCh-7h-8zZ" secondAttribute="bottom" constant="24" id="bG0-Ej-Z43"/>
+                            <constraint firstItem="tBj-Hj-S21" firstAttribute="top" secondItem="RbZ-N8-ETe" secondAttribute="bottom" constant="14" id="bS9-3u-9lv"/>
+                            <constraint firstItem="aXJ-U1-ITY" firstAttribute="trailing" secondItem="cdZ-Bc-02e" secondAttribute="trailing" id="hwa-tD-tDS"/>
+                            <constraint firstItem="NT9-XT-hqm" firstAttribute="centerX" secondItem="9By-L0-ft5" secondAttribute="centerX" id="o0H-Rb-spt"/>
+                            <constraint firstItem="tCh-7h-8zZ" firstAttribute="top" secondItem="aXJ-U1-ITY" secondAttribute="bottom" constant="25" id="roz-sb-rcb"/>
+                            <constraint firstItem="NT9-XT-hqm" firstAttribute="leading" secondItem="cdZ-Bc-02e" secondAttribute="leading" id="tOY-bJ-Qie"/>
+                            <constraint firstItem="NT9-XT-hqm" firstAttribute="centerX" secondItem="tBj-Hj-S21" secondAttribute="centerX" id="vqr-pr-cDw"/>
+                            <constraint firstItem="aXJ-U1-ITY" firstAttribute="top" secondItem="cdZ-Bc-02e" secondAttribute="bottom" constant="20" id="ylN-l0-7hn"/>
+                            <constraint firstItem="cdZ-Bc-02e" firstAttribute="top" secondItem="NT9-XT-hqm" secondAttribute="bottom" constant="19" id="zHC-oV-oeR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Sign Up" id="oVG-Bn-C3I"/>
                     <connections>
                         <outlet property="textFieldEMail" destination="aXJ-U1-ITY" id="MM8-oQ-nse"/>
                         <outlet property="textFieldName" destination="NT9-XT-hqm" id="lb0-KT-KzE"/>
+                        <outlet property="textFieldNameOfGroup" destination="tCh-7h-8zZ" id="GUx-HW-dbj"/>
                         <outlet property="textFieldPassword" destination="cdZ-Bc-02e" id="1TF-y6-JUR"/>
                         <segue destination="Qwi-Af-6n7" kind="show" identifier="mainWindow" id="fzK-Lv-SUT"/>
                     </connections>
