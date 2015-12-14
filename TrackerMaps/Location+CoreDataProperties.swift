@@ -19,7 +19,7 @@ extension Location {
     @NSManaged var longitude: NSNumber?
     @NSManaged var speed: NSNumber?
     @NSManaged var timeshtamp: NSDate?
-    @NSManaged var havePOI: NSNumber?
+    @NSManaged var havePOI: Bool
     @NSManaged var run: Run?
     @NSManaged var placePOI: NSSet?
 

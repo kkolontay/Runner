@@ -14,6 +14,7 @@ class PhotoPOIMakeViewController: UIViewController, UIImagePickerControllerDeleg
     var locations: [Location]?
     var placePIOs = [PlacePOI]()
     var delegate: StartTimerFromPause?
+    var placePOI: PlacePOI?
     @IBOutlet weak var textFieldComment: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     
@@ -34,13 +35,22 @@ class PhotoPOIMakeViewController: UIViewController, UIImagePickerControllerDeleg
         }
     }
     @IBAction func pressedSave(sender: AnyObject) {
-        let item = locations?.last
-        item?.placePOI = NSSet(array: placePIOs)
         let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
+        if placePOI == nil {
+         placePOI = NSEntityDescription.insertNewObjectForEntityForName("PlacePOI", inManagedObjectContext: (appDelegate?.managedObjectContext)!) as? PlacePOI
+        }
+        placePOI!.comment = textFieldComment.text
+        
+        placePIOs.append(placePOI!)
+        let item = locations?.last
+        item?.havePOI = true
+        item?.placePOI = NSSet(array: placePIOs)
+        //let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
         let managedObjectContext = appDelegate?.managedObjectContext
         if managedObjectContext!.hasChanges {
             do {
                 try managedObjectContext!.save()
+                placePOI = nil
             } catch {
                 let nserror = error as NSError
                 NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
@@ -90,6 +100,9 @@ class PhotoPOIMakeViewController: UIViewController, UIImagePickerControllerDeleg
         // Pass the selected object to the new view controller.
     }
     */
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]){
        let image = (info as NSDictionary).objectForKey("UIImagePickerControllerOriginalImaga") as! UIImage
         self.imageView.image = image
@@ -98,10 +111,10 @@ class PhotoPOIMakeViewController: UIViewController, UIImagePickerControllerDeleg
         let fileURL = documentsURL.URLByAppendingPathComponent((self.randomString() as String) + ".png")
         UIImagePNGRepresentation(image)!.writeToFile(fileURL.path!, atomically: true)
         let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
-        let placePOI = NSEntityDescription.insertNewObjectForEntityForName("PlacePOI", inManagedObjectContext: (appDelegate?.managedObjectContext)!) as! PlacePOI
-        placePOI.comment = textFieldComment.text
-        placePOI.pathPicture = fileURL.path
-        placePIOs.append(placePOI)
+        if placePOI == nil {
+            placePOI = NSEntityDescription.insertNewObjectForEntityForName("PlacePOI", inManagedObjectContext: (appDelegate?.managedObjectContext)!) as? PlacePOI
+        }
+        placePOI!.pathPicture = fileURL.path
         
         }
 }

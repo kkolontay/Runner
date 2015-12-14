@@ -45,6 +45,7 @@
 		EED2E82E1C19BE2A001A5B73 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE9F6C811BE0ED4900327FE7 /* MapKit.framework */; };
 		EEDDE8111C1CBC4200CB4FC6 /* SignUPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDDE8101C1CBC4200CB4FC6 /* SignUPViewController.swift */; };
 		EEDDE8131C1DF10B00CB4FC6 /* ConnectToParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDDE8121C1DF10B00CB4FC6 /* ConnectToParse.swift */; };
+		EEDDE8151C1F6E8600CB4FC6 /* SearchUsersTracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDDE8141C1F6E8600CB4FC6 /* SearchUsersTracksViewController.swift */; };
 		EEF9B5A11BEAA98F00B2982E /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEF9B5A01BEAA98F00B2982E /* Entitlements.plist */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +106,7 @@
 		EED10C041C1B75AD000B7A84 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		EEDDE8101C1CBC4200CB4FC6 /* SignUPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUPViewController.swift; sourceTree = "<group>"; };
 		EEDDE8121C1DF10B00CB4FC6 /* ConnectToParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectToParse.swift; sourceTree = "<group>"; };
+		EEDDE8141C1F6E8600CB4FC6 /* SearchUsersTracksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUsersTracksViewController.swift; sourceTree = "<group>"; };
 		EEE6DEED1C1874FA0081DA43 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		EEE6DEEF1C18751C0081DA43 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		EEF9B5A01BEAA98F00B2982E /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				EE0B2A6F1C15BA41009EC37B /* PhotoPOIMakeViewController.swift */,
 				EE6D8BEB1C1C0127005E2A18 /* LogInParseViewController.swift */,
 				EEDDE8101C1CBC4200CB4FC6 /* SignUPViewController.swift */,
+				EEDDE8141C1F6E8600CB4FC6 /* SearchUsersTracksViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 				EE562C671BDFA3A900D2875A /* AppDelegate.swift in Sources */,
 				EE0B2A671C15AD0F009EC37B /* Location.swift in Sources */,
 				EE0B2A681C15AD0F009EC37B /* Run+CoreDataProperties.swift in Sources */,
+				EEDDE8151C1F6E8600CB4FC6 /* SearchUsersTracksViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

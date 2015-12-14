@@ -193,6 +193,7 @@ extension StartViewController: CLLocationManagerDelegate {
         savedLocation.longitude = location!.coordinate.longitude
         savedLocation.altitude = location!.altitude
         savedLocation.speed = location!.speed * 3.6
+        savedLocation.havePOI = false
         savedLocations!.append(savedLocation)
        // locationManager.stopUpdatingLocation()
     }
@@ -223,6 +224,17 @@ extension StartViewController: CLLocationManagerDelegate {
                 abort()
             }
         }
+        let user = PFUser.currentUser()
+        if user == nil {
+            let alert = UIAlertController(title: "Warning", message: "You don't have authrisation", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: {(alertAction)in
+                alert.dismissViewControllerAnimated(true, completion: nil)
+            }))
+        }
+            else {
+                ConnectToParse.loadData(self.run)
+            }
+        
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "makePOI" {
