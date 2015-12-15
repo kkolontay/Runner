@@ -8,6 +8,7 @@
 
 import Foundation
 import Parse
+import CoreData
 
  class ConnectToParse: NSObject {
    /* static func signUP(name:String?, password:String?,  email:String?, nameOfGroup: String?) {
@@ -37,42 +38,46 @@ import Parse
         }
 
     }*/
-    class func fetchDataFromParse(name:String?) -> NSArray {
+    class func fetchDataFromParse(name:String?, tableView: RunTableViewController) -> (array: [Run], name: String) {
         var user: PFUser?
         let userQuery: PFQuery?
-        if name == nil {
+        if name!.isEmpty {
             user = PFUser.currentUser()
         }
         else {
-            userQuery = PFQuery(className: "User")
-            userQuery?.whereKey("name", equalTo: name!)
-            userQuery?.findObjectsInBackgroundWithBlock({
-                (objects, error) ->Void in
-                if error == nil {
-                    user = objects?.first as? PFUser
-                }
-            })
+            userQuery = PFQuery(className: "_User")
+            userQuery!.whereKey("username", equalTo: name!)
+            do {
+         let objectsFirst = try userQuery?.findObjects()
+                user = objectsFirst!.first as? PFUser
+            } catch {
+            }
         }
+        let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
+        let managedObjectContext = appDelegate?.managedObjectContext
         var fetchedData = [Run]()
         let mainQuery = PFQuery(className: "Run")
+        mainQuery.whereKey("user", equalTo: user!)
         mainQuery.orderByAscending("timeStamp")
         mainQuery.findObjectsInBackgroundWithBlock({
             (objects, error) -> Void in
             if error == nil {
-               // array.extend(objects! as [PFObject]) {
                 for object in objects! {
-                    let item = Run()
+                    let item = NSEntityDescription.insertNewObjectForEntityForName(
+                        "Run", inManagedObjectContext: managedObjectContext!) as? Run
                     //let fetchedItem = object as Run
-                    item.timeStamp = object.valueForKey("timeStamp") as? NSDate
-                    item.distanceFull = object.valueForKey( "distanceFull") as? NSNumber
-                    item.durationExsercise = object.valueForKey("durationExersice") as? NSNumber
-                    item.maxSpeed = object.valueForKey("maxSpeed") as? NSNumber
-                    item.minSpeed = object.valueForKey("minSpeed") as? NSNumber
-                    fetchedData.append(item)
+                   item!.timeStamp = object["timeStamp"] as? NSDate
+                    item!.distanceFull = object.valueForKey( "distanceFull") as? NSNumber
+                    item!.durationExsercise = object.valueForKey("durationExersice") as? NSNumber
+                    item!.maxSpeed = object.valueForKey("maxSpeed") as? NSNumber
+                    item!.minSpeed = object.valueForKey("minSpeed") as? NSNumber
+                    fetchedData.append(item!)
                 }
+                tableView.source = fetchedData
+               tableView.tableView.reloadData()
             }
         })
-        return fetchedData;
+        return (fetchedData, user!.username!);
     }
     class func loadData(run: Run?) {
         if let user = PFUser.currentUser() {

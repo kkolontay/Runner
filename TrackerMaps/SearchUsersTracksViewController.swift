@@ -21,8 +21,9 @@ class SearchUsersTracksViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "table" {
             let runTable: RunTableViewController = segue.destinationViewController as! RunTableViewController
-            runTable.source = ConnectToParse.fetchDataFromParse(usersTextField.text) as? [Run]
-            
+            let data = ConnectToParse.fetchDataFromParse(usersTextField.text, tableView: runTable)
+            runTable.source = data.array
+            runTable.name = data.name
         }
     }
 }

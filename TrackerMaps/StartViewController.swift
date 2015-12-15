@@ -203,17 +203,6 @@ extension StartViewController: CLLocationManagerDelegate {
         run!.minSpeed = minimalSpeed
         run!.durationExsercise = seconds
         run!.distanceFull = distance
-        
-       // var savedLocations = [Location]()
-       /* for location in locationsPoints {
-            let savedLocation = NSEntityDescription.insertNewObjectForEntityForName("Location", inManagedObjectContext: self.managedObjectContext) as! Location
-            savedLocation.timeshtamp = location.timestamp
-            savedLocation.latitude = location.coordinate.latitude
-            savedLocation.longitude = location.coordinate.longitude
-            savedLocation.altitude = location.altitude
-            savedLocation.speed = location.speed * 3.6
-            savedLocations.append(savedLocation)
-        }*/
         run!.location = NSSet(array: savedLocations!)
         if managedObjectContext.hasChanges {
             do {
