@@ -12,8 +12,17 @@ class SearchUsersTracksViewController: UIViewController {
 
     @IBOutlet weak var usersTextField: UITextField!
     @IBAction func searchTracks(sender: AnyObject) {
+        performSegueWithIdentifier("table", sender: nil)
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "table" {
+            let runTable: RunTableViewController = segue.destinationViewController as! RunTableViewController
+            runTable.source = ConnectToParse.fetchDataFromParse(usersTextField.text) as? [Run]
+            
+        }
     }
 }

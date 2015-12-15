@@ -41,6 +41,8 @@
 		EE6D8BEC1C1C0127005E2A18 /* LogInParseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6D8BEB1C1C0127005E2A18 /* LogInParseViewController.swift */; };
 		EE89E2021BEA9E0400370CFC /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE89E2011BEA9E0400370CFC /* HealthKit.framework */; };
 		EE9F6C821BE0ED4900327FE7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE9F6C811BE0ED4900327FE7 /* MapKit.framework */; };
+		EECAA18C1C1FF68200A577D8 /* RunTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECAA18B1C1FF68200A577D8 /* RunTableViewController.swift */; };
+		EECAA18E1C1FF9BC00A577D8 /* RunTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECAA18D1C1FF9BC00A577D8 /* RunTableViewCell.swift */; };
 		EED10C051C1B75AD000B7A84 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = EED10C041C1B75AD000B7A84 /* .gitignore */; };
 		EED2E82E1C19BE2A001A5B73 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE9F6C811BE0ED4900327FE7 /* MapKit.framework */; };
 		EEDDE8111C1CBC4200CB4FC6 /* SignUPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDDE8101C1CBC4200CB4FC6 /* SignUPViewController.swift */; };
@@ -103,6 +105,8 @@
 		EE89E2011BEA9E0400370CFC /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		EE9F6C811BE0ED4900327FE7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		EE9F6C851BE0ED6600327FE7 /* TrackerMaps.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TrackerMaps.entitlements; sourceTree = "<group>"; };
+		EECAA18B1C1FF68200A577D8 /* RunTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunTableViewController.swift; sourceTree = "<group>"; };
+		EECAA18D1C1FF9BC00A577D8 /* RunTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunTableViewCell.swift; sourceTree = "<group>"; };
 		EED10C041C1B75AD000B7A84 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		EEDDE8101C1CBC4200CB4FC6 /* SignUPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUPViewController.swift; sourceTree = "<group>"; };
 		EEDDE8121C1DF10B00CB4FC6 /* ConnectToParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectToParse.swift; sourceTree = "<group>"; };
@@ -172,6 +176,8 @@
 				EE6D8BEB1C1C0127005E2A18 /* LogInParseViewController.swift */,
 				EEDDE8101C1CBC4200CB4FC6 /* SignUPViewController.swift */,
 				EEDDE8141C1F6E8600CB4FC6 /* SearchUsersTracksViewController.swift */,
+				EECAA18B1C1FF68200A577D8 /* RunTableViewController.swift */,
+				EECAA18D1C1FF9BC00A577D8 /* RunTableViewCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -475,10 +481,12 @@
 				EE0B2A701C15BA41009EC37B /* PhotoPOIMakeViewController.swift in Sources */,
 				EEDDE8131C1DF10B00CB4FC6 /* ConnectToParse.swift in Sources */,
 				EE0B2A661C15AD0F009EC37B /* Location+CoreDataProperties.swift in Sources */,
+				EECAA18E1C1FF9BC00A577D8 /* RunTableViewCell.swift in Sources */,
 				EE0B2A6B1C15AD0F009EC37B /* PlacePOI.swift in Sources */,
 				EE562C6F1BDFA3A900D2875A /* TrackerMaps.xcdatamodeld in Sources */,
 				EE501BF01BE7754000C26180 /* ResultViewController.swift in Sources */,
 				EE562C671BDFA3A900D2875A /* AppDelegate.swift in Sources */,
+				EECAA18C1C1FF68200A577D8 /* RunTableViewController.swift in Sources */,
 				EE0B2A671C15AD0F009EC37B /* Location.swift in Sources */,
 				EE0B2A681C15AD0F009EC37B /* Run+CoreDataProperties.swift in Sources */,
 				EEDDE8151C1F6E8600CB4FC6 /* SearchUsersTracksViewController.swift in Sources */,

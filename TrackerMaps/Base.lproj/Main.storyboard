@@ -108,6 +108,7 @@
                     <connections>
                         <outlet property="nameTextField" destination="Xqv-FT-hfQ" id="qwJ-7R-HgK"/>
                         <outlet property="passwordTextField" destination="dTG-bB-PdC" id="l1O-B6-5hu"/>
+                        <segue destination="IAc-EI-wn0" kind="show" id="9jS-J1-xli"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rsd-Bw-fTz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -154,7 +155,7 @@
                     <navigationItem key="navigationItem" id="IBG-z3-2Ks"/>
                     <connections>
                         <outlet property="usersTextField" destination="sco-2q-xbr" id="Lar-5u-bSV"/>
-                        <segue destination="xrG-C5-IT7" kind="show" id="7L3-sg-IlO"/>
+                        <segue destination="xrG-C5-IT7" kind="show" identifier="table" id="7L3-sg-IlO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jxs-DN-b9D" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -239,6 +240,7 @@
                         <outlet property="textFieldName" destination="NT9-XT-hqm" id="lb0-KT-KzE"/>
                         <outlet property="textFieldNameOfGroup" destination="tCh-7h-8zZ" id="GUx-HW-dbj"/>
                         <outlet property="textFieldPassword" destination="cdZ-Bc-02e" id="1TF-y6-JUR"/>
+                        <segue destination="IAc-EI-wn0" kind="show" identifier="mainWindow" id="BVz-fR-OHP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aew-ay-vUX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -248,13 +250,13 @@
         <!--Tracks-->
         <scene sceneID="jB6-6U-qr4">
             <objects>
-                <tableViewController id="xrG-C5-IT7" sceneMemberID="viewController">
+                <tableViewController id="xrG-C5-IT7" customClass="RunTableViewController" customModule="TrackerMaps" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="L5A-NZ-Zmv">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="cellTracker" id="WHz-e6-nc1">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="cellTracker" id="WHz-e6-nc1" customClass="RunTableViewCell" customModule="TrackerMaps" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WHz-e6-nc1" id="TlJ-AY-Iia">
@@ -272,7 +274,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Tracks" id="Wfi-hJ-ZYe">
-                        <barButtonItem key="leftBarButtonItem" title="Main Screen" id="dnH-fF-bVn"/>
+                        <barButtonItem key="leftBarButtonItem" title="Main Screen" id="dnH-fF-bVn">
+                            <connections>
+                                <segue destination="tgP-d4-tWs" kind="presentation" id="oSe-53-ITR"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="N6A-DS-noW">
                             <connections>
                                 <segue destination="qlg-Ux-MAV" kind="show" id="VDe-kU-noZ"/>
@@ -601,7 +607,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mcj-0k-Uma">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mcj-0k-Uma">
                                 <rect key="frame" x="238" y="484" width="125" height="51"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="125" id="bCm-EY-keF"/>
@@ -674,15 +680,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="get your comment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HLW-L1-VYo">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="get your comment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HLW-L1-VYo">
                                 <rect key="frame" x="20" y="281" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PA7-Z8-8Rh">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PA7-Z8-8Rh">
                                 <rect key="frame" x="20" y="20" width="560" height="250"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HhO-1C-JWp">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HhO-1C-JWp">
                                 <rect key="frame" x="182" y="319" width="96" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="96" id="aRP-CK-Tho"/>
@@ -692,7 +698,7 @@
                                     <action selector="makePhoto:" destination="XM4-ma-i8l" eventType="touchUpInside" id="rdD-vH-q7B"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLo-zs-bCU">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLo-zs-bCU">
                                 <rect key="frame" x="325" y="319" width="90" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="IH2-FF-TJW"/>
@@ -844,4 +850,8 @@
         <image name="Password 1-25.png" width="25" height="25"/>
         <image name="active.png" width="64" height="64"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="BVz-fR-OHP"/>
+        <segue reference="oSe-53-ITR"/>
+    </inferredMetricsTieBreakers>
 </document>
