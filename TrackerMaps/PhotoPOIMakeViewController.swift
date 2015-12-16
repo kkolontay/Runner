@@ -18,6 +18,7 @@ class PhotoPOIMakeViewController: UIViewController, UIImagePickerControllerDeleg
     @IBOutlet weak var textFieldComment: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
         if( UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)) {
@@ -33,7 +34,32 @@ class PhotoPOIMakeViewController: UIViewController, UIImagePickerControllerDeleg
             alert.dismissViewControllerAnimated(true, completion: nil)
             }))
         }
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object:  nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
     }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+    func keyboardWillShow(notification: NSNotification) {
+        
+        adjustInsetForKeyboardShow(true, notification: notification)
+        
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        adjustInsetForKeyboardShow(false, notification: notification)
+    }
+    
+    func adjustInsetForKeyboardShow(show: Bool, notification: NSNotification) {
+        let userInfo = notification.userInfo ?? [:]
+        let keyboardFrame = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).CGRectValue()
+        let adjusmentHeight = (CGRectGetHeight(keyboardFrame) + 60) * (show ? 1 : -1)
+        scrollView.contentInset.bottom += adjusmentHeight
+        scrollView.scrollIndicatorInsets.bottom += adjusmentHeight
+    }
+    
     @IBAction func pressedSave(sender: AnyObject) {
         let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
         if placePOI == nil {
