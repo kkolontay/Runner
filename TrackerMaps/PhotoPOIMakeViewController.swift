@@ -21,6 +21,7 @@ class PhotoPOIMakeViewController: UIViewController, UIImagePickerControllerDeleg
     @IBOutlet weak var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        textFieldComment.delegate = self
         if( UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)) {
             let picker: UIImagePickerController = UIImagePickerController()
             picker.sourceType = .Camera
@@ -143,5 +144,13 @@ class PhotoPOIMakeViewController: UIViewController, UIImagePickerControllerDeleg
         placePOI!.pathPicture = fileURL.path
         
         }
+}
+
+extension PhotoPOIMakeViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true;
+    }
 }
 
